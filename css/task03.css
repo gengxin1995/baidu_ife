@@ -1,0 +1,47 @@
+body{
+    padding: 20px;
+}
+
+.Main{
+    border: 1px solid #999;
+    background-color: #eee;
+    padding: 20px;
+    margin: 0 auto;
+    overflow: auto;
+    min-width: 600px;
+}
+
+.left{
+    float: left;
+    border: 1px solid #999;
+    width: 160px;
+    padding: 20px;
+}
+
+.team_logo{
+    float: left;
+}
+
+.team_name{
+    text-align: center;
+    width: 180px;
+}
+
+.right{
+    float: right;
+    border: 1px solid #999;
+    width: 120px;
+}
+
+.member_logo{
+    margin: 20px;
+    border: 1px solid #999;
+    display: block;
+}
+
+.middle{
+    padding: 20px;
+    border: 1px solid #999;
+    margin-left: 220px;
+    margin-right: 140px;
+}
