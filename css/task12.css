@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.table{
+    margin-left: 20px;
+    margin-top: 20px;
+    font-family: "Microsoft Yahei";
+}
+.table thead{
+    background-color: #000;
+    color: #fff;
+}
+.table tbody tr:nth-child(-n+3){
+    color: #ff0000;
+}
+.table tbody tr:nth-child(2n){
+    background-color: #b5b6b6;
+}
+.part2{
+    width: 500px;
+    margin-top: 20px;
+}
+.part2 input{
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #b5b6b6;
+    transition: 1s ease-in-out;
+}
+.part2 input:focus{
+    width: 50%;
+}
+.container{
+    width: 300px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.container .banner{
+    width: 100%;
+    height: 100%;
+}
+.banner li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+ul,li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#banner-1{
+    background-color: #ff0000;
+}
+#banner-2{
+    background-color: #00ff00;
+}
+#banner-3{
+    background-color: #0000ff;
+}
+@keyframes scroll {
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+.banner li:target{
+    z-index: 2;
+    animation: scroll 1s linear;
+}
+.btn{
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    z-index: 10;
+}
+.btn a{
+    display: inline-block;
+    margin-left: 2px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-color: rgba(255,255,255,0.5);
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+}
