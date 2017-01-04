@@ -53,7 +53,7 @@ body{
 }
 .part1{
     height: 690px;
-    background-image: url("../images/task07/section_1.jpg");
+    background-image: url("../images/section_1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -95,25 +95,25 @@ body{
     position: relative;
 }
 .part2 div:nth-of-type(1){
-    background-image: url("../images/task07/circle.png");
+    background-image: url("../images/circle.png");
     background-repeat: no-repeat;
     background-position: center 43px;
 
 }
 .part2 div:nth-of-type(2){
-    background-image: url("../images/task07/flag.png");
+    background-image: url("../images/flag.png");
     background-repeat: no-repeat;
     background-position: center 43px;
 
 }
 .part2 div:nth-of-type(3){
-    background-image: url("../images/task07/flower.png");
+    background-image: url("../images/flower.png");
     background-repeat: no-repeat;
     background-position: center 43px;
 
 }
 .part2 div:nth-of-type(4){
-    background-image: url("../images/task07/square.png");
+    background-image: url("../images/square.png");
     background-repeat: no-repeat;
     background-position: center 43px;
 
@@ -148,7 +148,7 @@ body{
 }
 .part4{
     height: 290px;
-    background-image: url("../images/task07/map.jpg");
+    background-image: url("../images/map.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 50px;
@@ -184,7 +184,7 @@ body{
 }
 .select{
     border: solid 1px #fff;
-    background: #fff url(../images/task07/red-arrow.png) no-repeat scroll right 10px center;
+    background: #fff url(../images/red-arrow.png) no-repeat scroll right 10px center;
     padding-right: 20px;
     padding-left: 15px;
     color: #aba6a5;
@@ -250,7 +250,7 @@ body{
 }
 .part6-left{
     width: 67%;
-    background-image: url("../images/task07/middle-left.jpg");
+    background-image: url("../images/middle-left.jpg");
     float: left;
     height: 443px;
     background-size: cover;
@@ -442,7 +442,7 @@ body{
     left: 100%;
 }
 .part7-right{
-    background-image: url("../images/task07/train.png");
+    background-image: url("../images/train.png");
     background-size: cover;
     margin-left: 67%;
     height: 520px;
@@ -499,7 +499,7 @@ body{
     float: right;
     width: 100%;
     text-align: right;
-    background-image: url("../images/task07/arrow.png");
+    background-image: url("../images/arrow.png");
     background-repeat: no-repeat;
     background-position: 249px 8px;
     font-size: 16px;
