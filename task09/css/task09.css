@@ -466,7 +466,7 @@ i.user_info{
 .project{
     margin-bottom: 8px;
 }
-.project>div{
+.project>div,.part_5>div{
     height: 357px;
     background: #fff;
     border: 1px solid #ced1d4;
@@ -620,9 +620,150 @@ h3.tt {
 .detailed_content form input[type="submit"]:hover {
     background: #236b9b;
 }
-
-
-
+.part_5{
+    margin-bottom: 140px;
+}
+.date{
+    width: 350px;
+    margin-right: 8px;
+}
+.in_date{
+    width: 310px;
+    margin: 0 auto;
+    color: #535353;
+}
+.select_time {
+    height: 32px;
+    padding-top: 10px;
+    padding-left: 2px;
+    border-bottom: 1px solid #a9cfec;
+}
+.select_time div{
+    float: left;
+    height: 20px;
+    border: 1px solid #cacbcb;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    margin-right: 6px;
+    cursor: pointer;
+}
+.select_time div:last-child{
+    margin-right: 0;
+}
+.w62{width:62px;}
+.w73{width:73px;}
+.w83{width:83px;}
+.select_time div i{
+    width: 19px;
+    height: 20px;
+    border: 1px solid #f5f6f7;
+    background: url("../images/select_down.png") no-repeat center;
+    float: right;
+}
+.week{
+    height: 30px;
+    border-bottom: 1px solid #ececed;
+    line-height: 30px;
+}
+.week li{
+    float: left;
+    text-align: center;
+    width: 14.2%;
+}
+.day{
+    padding-top: 7px;
+}
+.day p{
+    float: left;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 20px;
+    color: #323333;
+    margin-right: 5px;
+    margin-bottom: 2px;
+}
+.day p:nth-child(7n){
+    margin-right: 0;
+}
+.day p b.holiday,.day p:nth-child(7n) span,.day p:nth-child(7n+6) span {
+    color: #cd3539;
+}
+.day p:not(:empty):hover,.day p.make {
+    border: 1px solid #f5c21d;
+    cursor: pointer;
+}
+.day p span {
+    display: block;
+}
+.day p b {
+    display: block;
+    font-weight: normal;
+}
+.car_list{
+    width: 530px;
+}
+.car_list_content {
+    padding-top: 18px;
+}
+.car_list_content table {
+    margin: 0 auto;
+    width: 450px;
+    color: #323333;
+}
+.car_list_content table tr:not(:first-child):hover {
+    background: #f3f5f6;
+}
+.car_list_content table td,.car_list_content table th {
+    height: 23px;
+    text-align: center;
+}
+.car_list_content table td:nth-child(1) {
+    width: 66px;
+}
+.car_list_content table td:nth-child(2) {
+    width: 90px;
+}
+.car_list_content table th:nth-child(3) {
+    text-align: left;
+    padding-left: 29px;
+}
+.car_list_content table td:nth-child(3) {
+    text-align: left;
+    padding-left: 35px;
+}
+.progress_bar {
+    display: inline-block;
+    width: 168px;
+    height: 4px;
+    background: #dcdcdc;
+    position: relative;
+    top: -1px;
+    margin-left: 10px;
+}
+.progress_bar p {
+    height: 4px;
+}
+.car_list_content table tr:nth-child(-n+4) p {
+    background: #ec6d51;
+}
+.car_list_content table tr:nth-child(n+5) p {
+    background: #7ecaf0;
+}
+.w80_perc{width:80%;}
+.w70_perc{width:70%;}
+.w60_perc{width:60%;}
+.w55_perc{width:55%;}
+.w50_perc{width:50%;}
+.w40_perc{width:40%;}
+.w35_perc{width:35%;}
+.w30_perc{width:30%;}
+.w28_perc{width:28%;}
+.w25_perc{width:25%;}
+.w40_perc{width:40%;}
 
 
 
