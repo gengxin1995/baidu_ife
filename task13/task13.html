@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>零基础JavaScript编码（一）</title>
+</head>
+<body>
+    <label >请输入北京今天空气质量：<input type="text" id="aqi-input"></label>
+    <button id="button">确认填写</button>
+    <div>您输入的值是：<span id="aqi-display">尚无录入</span></div>
+    <script type="text/javascript">
+        (function(){
+            var input = document.getElementById("aqi-input");
+            var dis = document.getElementById("aqi-display");
+            var button = document.getElementById("button");
+            function display(){
+                var num = parseFloat(input.value);
+                if(!isNaN(num)&&(num>=0)&&(num<=1000)){
+                    dis.innerHTML=num;
+                }else{
+                    alert("请重新输入0-1000的有效值！");
+                }
+            }
+            button.onclick = display;
+            input.onkeydown = function(e){
+                e = e||window.event;
+                if(e.keyCode==13){
+                    display();
+                }
+            }
+        })();
+    </script>
+</body>
+</html>
