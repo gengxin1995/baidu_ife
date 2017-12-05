@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基础JavaScript练习（二）</title>
+    <script src="task19.js"></script>
+    <style>
+        #container {
+            display: flex;
+            align-items: flex-end;
+            height: 505px;
+        }
+        #container div {
+            width: 15px;
+            margin: 3px;
+            transition: height 500ms;
+        }
+        .red {
+            background-color: red;
+        }
+        .blue {
+            background-color: blue;
+        }
+        .green {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <input id="num_input" type="text">
+    <input type="button" value="左侧入">
+    <input type="button" value="右侧入">
+    <input type="button" value="左侧出">
+    <input type="button" value="右侧出">
+    <input type="button" value="排序">
+    <input type="button" value="随机一组数据">
+    interval(ms):<input type="text" id="renderInterval" value="150">
+</div>
+<div id="container">
+
+</div>
+</body>
+</html>
