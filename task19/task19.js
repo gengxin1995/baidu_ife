@@ -72,21 +72,21 @@ window.onload = function () {
                 this.str.push(Math.floor(Math.random() * 91 + 10));
             }
             this.paint();
+        },
+        mysort: function () {
+            var len = this.str.length;
+            var tmp;
+            for (var i = 0; i < len; i++) {
+                for (var j = 0; j < len - i - 1; j++) {
+                    if (this.str[j] > this.str[j + 1]) {
+                        tmp = this.str[j];
+                        this.str[j] = this.str[j + 1];
+                        this.str[j + 1] = tmp;
+                        this.paint();
+                    }
+                }
+            }
         }
-        // mysort: function () {
-        //     var len = this.str.length;
-        //     var tmp;
-        //     for (var i = 0; i < len; i++) {
-        //         for (var j = 0; j < len - i - 1; j++) {
-        //             if (this.str[j] > this.str[j + 1]) {
-        //                 tmp = this.str[j];
-        //                 this.str[j] = this.str[j + 1];
-        //                 this.str[j + 1] = tmp;
-        //                 this.paint();
-        //             }
-        //         }
-        //     }
-        // }
     }
 
     function addDivDelEvent() {
@@ -118,47 +118,47 @@ window.onload = function () {
     function validateStr(input) {
         return (/^[0-9]+$/).test(input);
     }
-
-    function swap(ele1, ele2) {
-        var temp = ele1.offsetHeight;
-        var text = ele1.innerText;
-
-        ele1.offsetHeight = ele2.offsetHeight;
-        ele1.style.height = ele2.offsetHeight + "px";
-        ele1.innerText = ele2.innerText;
-        ele2.offsetHeight = temp;
-        ele2.style.height = temp + "px";
-        ele2.innerText = text;
-    };
-
-    function bubbleSort(container, renderInterval) {
-        var eles = container.querySelectorAll("div"),
-            len  = eles.length, i, j = 0, timer;
-
-        i = len - 1;
-        timer = setInterval(function() {
-            if(i < 1) {
-                clearInterval(timer);
-            }
-            if(j == i) {
-                --i;
-                j = 0;
-            }
-            if (eles[j].offsetHeight > eles[j+1].offsetHeight) {
-                swap(eles[j], eles[j+1]);
-            }
-            ++j;
-        }, renderInterval);
-    };
+    //
+    // function swap(ele1, ele2) {
+    //     var temp = ele1.offsetHeight;
+    //     //var text = ele1.innerText;
+    //
+    //     //ele1.innerText = ele2.innerText;
+    //     ele1.offsetHeight = ele2.offsetHeight;
+    //     ele1.style.height = ele2.offsetHeight + "px";
+    //     //ele2.innerText = text;
+    //     ele2.offsetHeight = temp;
+    //     ele2.style.height = temp + "px";
+    // };
+    //
+    // function bubbleSort(container, renderInterval) {
+    //     var eles = container.querySelectorAll("div"),
+    //         len  = eles.length, i, j = 0, timer;
+    //
+    //     i = len - 1;
+    //     timer = setInterval(function() {
+    //         if(i < 1) {
+    //             clearInterval(timer);
+    //         }
+    //         if(j == i) {
+    //             --i;
+    //             j = 0;
+    //         }
+    //         if (eles[j].offsetHeight > eles[j+1].offsetHeight) {
+    //             swap(eles[j], eles[j+1]);
+    //         }
+    //         ++j;
+    //     }, renderInterval);
+    // };
 
     addEventHandler(buttonList[1], "click", function () { queue.leftPush(getInput()) });
     addEventHandler(buttonList[2], "click", function () { queue.rightPush(getInput()) });
     addEventHandler(buttonList[3], "click", function () { queue.leftPop() });
     addEventHandler(buttonList[4], "click", function () { queue.rightPop() });
     addEventHandler(buttonList[5], "click", function () {
-        renderInterval = buttonList[7].value || 150;
-        //queue.mysort(renderInterval);
-        bubbleSort(container, renderInterval);
+        //renderInterval = buttonList[7].value || 150;
+        queue.mysort();
+        //bubbleSort(container, renderInterval);
     });
     addEventHandler(buttonList[6], "click", function () { queue.randomFN() });
 }
