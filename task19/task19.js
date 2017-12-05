@@ -108,7 +108,7 @@ window.onload = function () {
             throw new Error("no room");
         }
         var val = parseInt(input);
-        if (val > 100 || val < 10) {
+        if (val >= 100 || val <= 10) {
             alert("out of range");
             throw new Error('');
         }
