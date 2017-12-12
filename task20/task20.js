@@ -32,6 +32,7 @@ window.onload = function () {
         addDivDelEvent();
     }
 
+    //左侧入
     function leftPush(arr) {
         for (var i = 0; i < arr.length; i++) {
             dataList.unshift(arr[i]);
@@ -40,6 +41,7 @@ window.onload = function () {
         render();
     }
 
+    //右侧入
     function rightPush(arr) {
         for (var i = 0; i < arr.length; i++) {
             dataList.push(arr[i]);
@@ -52,6 +54,7 @@ window.onload = function () {
         return (dataList.length == 0);
     }
 
+    //左侧出
     function leftPop() {
         if (!isEmpty()) {
             alert(parseInt(dataList.shift()));
@@ -61,6 +64,7 @@ window.onload = function () {
         }
     }
 
+    //右侧出
     function rightPop() {
         if (!isEmpty()) {
             alert(parseInt(dataList.pop()));
@@ -76,6 +80,7 @@ window.onload = function () {
         render();
     }
 
+    //为每个div添加点击删除事件
     function addDivDelEvent() {
         var container = document.getElementById("container");
         for (var cur = 0; cur < container.childNodes.length; cur++) {
@@ -88,29 +93,6 @@ window.onload = function () {
     function getInput() {
         var input = document.getElementById("input");
         return input.value.split(/[^0-9a-zA-Z\u4e00-\u9fa5]+/).filter(function (t) { return t !== ''; });
-    }
-    
-    function isMatch(keyword, test) {
-        var reg = new RegExp(keyword);
-        if (test.match(reg)) return true;
-    }
-    
-    function showHigh(highLight) {
-        
-    }
-    
-    function search() {
-        var keyword = document.getElementById("search_input");
-        if(keyword.length === 0) return;
-        var highLight = [];
-        for (var i = 0; i < dataList.length; i++) {
-            if (isMatch(keyword, dataList[i])) {
-                highLight.push(i);
-            }
-        }
-        render();
-        showHigh(highLight);
-        document.getElementById("search_input").value = "";
     }
 
     addEventHandler(buttonList[0], "click", function () { leftPush(getInput()) });
