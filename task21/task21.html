@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基础JavaScript练习（四）</title>
+    <style>
+        #tag_list div, #hobby_list div {
+            display: inline-block;
+            font-size: 30px;
+            color: #fff;
+            text-align: center;
+            height: 50px;
+            margin: 2px 10px 2px 0;
+            padding: 0 15px;
+        }
+        #tag_list div {
+            background-color: #78BCFB;
+        }
+        #hobby_list div {
+            background-color: orange;
+        }
+        #tag_box, #hobby_box {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+<div id="tag_box">
+    <span>Tags:</span><input type="text" id="tag_input">
+</div>
+<div id="tag_list">
+
+</div>
+<div id="hobby_box">
+    <textarea rows="3" cols="25" id="hobby_input"></textarea>
+    <div><input type="button" value="确认兴趣爱好" id="hobby_btn"></div>
+</div>
+<div id="hobby_list">
+
+</div>
+<script src="task21.js"></script>
+</body>
+</html>
