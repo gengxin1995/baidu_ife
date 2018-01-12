@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript和树（一）</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .root {
+            width: 800px;
+            margin: 30px auto;
+            display: flex;
+            border: 1px solid #000;
+            justify-content: space-around;
+            align-items: center;
+            padding: 15px;
+            background-color: #fff;
+        }
+        .child{
+            display: flex;
+            border: 1px solid #000;
+            justify-content: space-around;
+            align-items: center;
+            padding: 15px;
+            margin: 10px;
+            background-color: #fff;
+        }
+        p {
+            width: 800px;
+            margin: 30px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="root">
+        <div class="child">
+            <div class="child">
+                <div class="child"></div>
+                <div class="child"></div>
+            </div>
+            <div class="child">
+                <div class="child"></div>
+                <div class="child"></div>
+            </div>
+        </div>
+        <div class="child">
+            <div class="child">
+                <div class="child"></div>
+                <div class="child"></div>
+            </div>
+            <div class="child">
+                <div class="child"></div>
+                <div class="child"></div>
+            </div>
+        </div>
+    </div>
+    <p>
+        <input type="button" value="前序">
+        <input type="button" value="中序">
+        <input type="button" value="后序">
+    </p>
+    <script type="text/javascript" src="task22.js"></script>
+</body>
+</html>
