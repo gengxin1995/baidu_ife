@@ -107,7 +107,7 @@ window.onload = function () {
             } else {
                 head.style.backgroundColor = "blue";//显示蓝色
                 timer = setTimeout(function () {
-                    head.style.backgroundColor = "#fff";//1秒后节点的蓝色变为白色
+                    head.style.backgroundColor = "#fff";
                     searchShow(); //递归调用，使要显示的节点不停出队显示，直至为空
                 }, 800);
             }
