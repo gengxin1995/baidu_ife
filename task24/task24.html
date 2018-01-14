@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript和树（三）</title>
+    <style>
+        * {
+            font-family: "Microsoft YaHei UI", sans-serif;
+            font-size: 10px;
+        }
+        .one {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            border: 2px solid;
+            margin: 10px;
+            padding: 10px;
+            flex-wrap: wrap;
+            background-color: #fff;
+            -webkit-transition: all .5s ease-in-out;
+            -moz-transition: all .5s ease-in-out;
+            -o-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out;
+        }
+        .two {  height: 200px;  }
+        .three {  height: 150px;  }
+        .four {  height: 100px;  }
+        .five {  height: 50px;  }
+        .six {  height: 25px;  }
+        .one div {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border: 2px solid;
+            margin: 10px;
+            padding: 10px;
+            background-color: #fff;
+            -webkit-transition: all .5s ease-in-out;
+            -moz-transition: all .5s ease-in-out;
+            -o-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out;
+        }
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <div class="one">
+        Super
+        <div class="two">
+            Apple
+            <div class="three">
+                Cow
+                <div class="four">Yellow</div>
+                <div class="four">
+                    Blue
+                    <div class="five">Color</div>
+                    <div class="five">Black</div>
+                    <div class="five">Angela</div>
+                </div>
+            </div>
+            <div class="three">
+                Phone
+            </div>
+            <div class="three">
+                Music
+                <div class="four">Book</div>
+                <div class="four">
+                    School
+                    <div class="five">Pace</div>
+                </div>
+            </div>
+        </div>
+        <div class="two">
+            Orange
+            <div class="three">
+                Human
+                <div class="four">Code</div>
+                <div class="four">Man</div>
+                <div class="four">Sport</div>
+            </div>
+            <div class="three">
+                Woman
+                <div class="four">
+                    Shop
+                    <div class="five">Buy</div>
+                </div>
+                <div class="four">Glass</div>
+            </div>
+        </div>
+        <div class="two">Fish</div>
+    </div>
+</div>
+<input type="text" placeholder="请输入要查找的内容">
+<input type="button" value="深度优先搜索">
+<input type="button" value="广度优先搜索">
+<input type="button" value="删除节点及其子元素">
+<input type="text" placeholder="请输入要插入的内容">
+<input type="button" value="插入节点">
+<script type="text/javascript" src="task24.js"></script>
+</body>
+</html>
