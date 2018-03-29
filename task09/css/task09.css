@@ -1,9 +1,12 @@
+body{
+    width: 100%;
+}
 .header{
     height: 56px;
     background-color: #2189bf;
 }
 .inHeader{
-    width: 1193px;
+    width: 100%;
     margin: 0 auto;
     padding-right: 87px;
 }
@@ -36,17 +39,17 @@
     background: url("../images/login.png") no-repeat 0 6px;
 }
 .aside{
-    width: 1280px;
+    width: 100%;
     margin: 0 auto;
     background-color: #2a2e3d;
 }
 .info{
-    width: 260px;
+    width: 200px;
     float: left;
 }
 info>div{
     padding-top: 18px;
-    padding-left: 32px;
+    padding-left: 10px;
     height: 132px;
 }
 .head_pic{
@@ -55,7 +58,7 @@ info>div{
     width: 55px;
     border: 1px solid #e8e7e7;
     border-radius: 50%;
-    margin-left: 45px;
+    margin-left: 30px;
     margin-top: 16px;
     margin-right: 18px;
 }
@@ -75,7 +78,7 @@ info>div{
 }
 .focus{
     margin-top: 24px;
-    margin-left: 30px;
+    margin-left: 15px;
     margin-bottom: 20px;
 }
 .focus li{
@@ -175,7 +178,7 @@ i.user_info{
 
 .statement{
     float: left;
-    width: 1020px;
+    width: 963px;
     background-color: #ededed;
 }
 .main_header{

@@ -34,6 +34,10 @@ body {
     color: #fff;
 }
 
+.Header a{
+    text-decoration: none;
+}
+
 .Header a:visited {
     color: #f00;
 }

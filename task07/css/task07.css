@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    min-width: 1280px;
+    width: 100%;
 }
 .Header{
     height: 55px;
@@ -198,7 +198,6 @@ body{
     background-color: #bf4f49;
     border: 1px solid #bf4f49;
     text-align: center;
-    padding-left: 25px;
     cursor: pointer;
 }
 .part5{
@@ -469,6 +468,14 @@ body{
     margin: 0 auto;
     margin-bottom: 15px;
     border:1px solid #e74f4d;
+    -webkit-transition: width 0.4s ease-in-out;
+    -ms-transition: width 0.4s ease-in-out;
+    -o-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.part8-top hr:hover{
+    width: 300px;
 }
 .part8-top p{
     font-size: 12px;
@@ -477,12 +484,12 @@ body{
     margin-left: 429px;
 }
 .part8-left{
-    width: 293px;
+    width: 28%;
     height: 300px;
     float: left;
     font-size: 20px;
     text-align: left;
-    margin: 0 50px 0 180px;
+    margin: 0 30px 0 70px;
 }
 .part8-left h5{
     font-family: "黑体";
@@ -505,9 +512,8 @@ body{
     font-size: 16px;
 }
 .part8-right{
-    width: 700px;
     height: 300px;
-    float: left;
+    margin-left: 38%;
     font-size: 20px;
     text-align: left;
 }

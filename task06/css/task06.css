@@ -31,7 +31,7 @@ body{
     font-family: "SimHei";
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 10px;
 }
 .top-time{
     position: absolute;
@@ -353,7 +353,7 @@ li{
     position: absolute;
     left: 80px;
     top: 50px;
-    font-size: 21px;
+    font-size: 20px;
     font-family: "黑体";
     font-style: oblique;
     line-height: 24px;
