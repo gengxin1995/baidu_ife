@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>听指令的小方块（二）</title>
+    <link rel="stylesheet" href="task34.css">
+</head>
+<body>
+<div class="container">
+    <table>
+        <tbody id="background" class="background"></tbody>
+    </table>
+
+    <div id="square" class="square">
+        <div class="square-face"></div>
+    </div>
+
+    <div class="control" id="control">
+        <input id="cmd" type="text">
+        <input id="run" type="button" value="执行">
+    </div>
+
+    <div class="pre">
+        <pre>
+            GO：前进一格
+            TUN LEF：向左转
+            TUN RIG：向右转
+            TUN BAC：向后转
+            TRA LEF：向屏幕的左侧移动一格，方向不变
+            TRA TOP：向屏幕的上面移动一格，方向不变
+            TRA RIG：向屏幕的右侧移动一格，方向不变
+            TRA BOT：向屏幕的下面移动一格，方向不变
+            MOV LEF：方向转向屏幕左侧，并向屏幕的左侧移动一格
+            MOV TOP：方向转向屏幕上面，向屏幕的上面移动一格
+            MOV RIG：方向转向屏幕右侧，向屏幕的右侧移动一格
+            MOV BOT：方向转向屏幕下面，向屏幕的下面移动一格
+        </pre>
+</div>
+</div>
+
+<script src="task34.js"></script>
+</body>
+</html>
