@@ -52,53 +52,66 @@ function addEventHandler(ele, event, handler) {
     function move(cmd) {
         cmd = cmd.toLowerCase();
 
-        if (cmd == 'go') {
-            go();
-        } else if (cmd == 'tun lef') {
-            pos.face--;
-        } else if (cmd == 'tun rig') {
-            pos.face++;
-        } else if (cmd == 'tun bac') {
-            pos.face += 2;
-        } else if (cmd == 'tra lef') {
-            if (pos.X > 1) {
-                pos.X--;
-            }
-        } else if (cmd == 'tra top') {
-            if (pos.Y > 1) {
-                pos.Y--;
-            }
-        } else if (cmd == 'tra rig') {
-            if (pos.X < 10) {
-                pos.X++;
-            }
-        } else if (cmd == 'tra bot') {
-            if (pos.Y < 10) {
-                pos.Y++;
-            }
-        } else if (cmd == 'mov lef') {
-            pos.face = 3;
-            if (pos.X > 1) {
-                pos.X--;
-            }
-        } else if (cmd == 'mov top') {
-            pos.face = 0;
-            if (pos.Y > 1) {
-                pos.Y--;
-            }
-        } else if (cmd == 'mov rig') {
-            pos.face = 1;
-            if (pos.X < 10) {
-                pos.X++;
-            }
-        } else if (cmd == 'mov bot') {
-            pos.face = 2;
-            if (pos.Y < 10) {
-                pos.Y++;
-            }
-        } else {
-            alert("请输入正确的指令");
-            return false;
+        switch (cmd) {
+            case 'go':
+                go();
+                break;
+            case 'tun lef':
+                pos.face--;
+                break;
+            case 'tun rig':
+                pos.face++;
+                break;
+            case 'tun bac':
+                pos.face += 2;
+                break;
+            case 'tra lef':
+                if (pos.X > 1) {
+                    pos.X--;
+                }
+                break;
+            case 'tra top':
+                if (pos.Y > 1) {
+                    pos.Y--;
+                }
+                break;
+            case 'tra rig':
+                if (pos.X < 10) {
+                    pos.X++;
+                }
+                break;
+            case 'tra bot':
+                if (pos.Y < 10) {
+                    pos.Y++;
+                }
+                break;
+            case 'mov lef':
+                pos.face = 3;
+                if (pos.X > 1) {
+                    pos.X--;
+                }
+                break;
+            case 'mov top':
+                pos.face = 0;
+                if (pos.Y > 1) {
+                    pos.Y--;
+                }
+                break;
+            case 'mov rig':
+                pos.face = 1;
+                if (pos.X < 10) {
+                    pos.X++;
+                }
+                break;
+            case 'mov bot':
+                pos.face = 2;
+                if (pos.Y < 10) {
+                    pos.Y++;
+                }
+                break;
+            default:
+                alert("请输入正确的指令");
+                return false;
         }
         draw();
     }
