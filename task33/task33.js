@@ -45,16 +45,35 @@ function addEventHandler(ele, event, handler) {
         X: 6,	// X坐标 1-10
         Y: 6,	// Y坐标 1-10
         face: 0	// 方向 0: 上, 1: 右, 2: 下, 3: 左;
-    }
+    };
+
+    addEventHandler(btnRun, 'click', function () {
+        var cmd = document.getElementById('cmd').value;
+        move(cmd);
+    });
+    addEventHandler(btnGo, 'click', function () {
+        move('GO');
+    });
+    addEventHandler(btnLef, 'click', function () {
+        move('TUN LEF');
+    });
+    addEventHandler(btnRig, 'click', function () {
+        move('TUN RIG');
+    });
+    addEventHandler(btnBac, 'click', function () {
+        move('TUN BAC');
+    });
 
     function move(cmd) {
-        if (cmd === 'GO') {
+        console.log(cmd);
+        cmd = cmd.toLowerCase();
+        if (cmd == 'go') {
             go();
-        } else if (cmd === 'TUN LEF') {
+        } else if (cmd == 'tun lef') {
             tunLef();
-        } else if (cmd === 'TUN RIG') {
+        } else if (cmd == 'tun rig') {
             tunRig();
-        } else if (cmd === 'TUN BAC') {
+        } else if (cmd == 'tun bac') {
             tunRig();
             tunRig();
         } else {
@@ -111,24 +130,6 @@ function addEventHandler(ele, event, handler) {
             square.style.transition = square.style.webkitTransition = ""	// 还原过渡效果
         }, 0)
     }
-
-    var cmd = document.getElementById("cmd").value;
-
-    addEventHandler(btnRun, 'click', function () {
-        move(cmd);
-    });
-    addEventHandler(btnGo, 'click', function () {
-        move('GO');
-    })
-    addEventHandler(btnLef, 'click', function () {
-        move('TUN LEF');
-    })
-    addEventHandler(btnRig, 'click', function () {
-        move('TUN RIG');
-    })
-    addEventHandler(btnBac, 'click', function () {
-        move('TUN BAC');
-    })
 
 })();
 
