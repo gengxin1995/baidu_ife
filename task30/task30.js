@@ -5,7 +5,7 @@
      * @param event
      * @param handler
      */
-    function addEvnetHandler(ele, event, handler) {
+    function addEventHandler(ele, event, handler) {
         if (ele.addEventListener) {
             ele.addEventListener(event, handler, false);
         }else if(ele.attachEvent) {
@@ -59,12 +59,12 @@
     var inputs = document.getElementsByTagName("input");
     [].forEach.call(inputs, function (t) {
         var id = t.getAttribute("id").slice(2);
-        addEvnetHandler(t, "blur", function () {
+        addEventHandler(t, "blur", function () {
             checkValue(id);
         })
     });
 
-    addEvnetHandler(document.getElementById("btn"), "click", function (e) {
+    addEventHandler(document.getElementById("btn"), "click", function (e) {
         e.preventDefault();
 
         [1,2,3,4,5].forEach(function (t) {
