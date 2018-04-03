@@ -45,7 +45,8 @@ function addEventHandler(ele, event, handler) {
     };
 
     addEventHandler(btnRun, 'click', function () {
-        var cmd = document.getElementById("cmd").value;
+        var cmd = document.getElementById("cmd").value.trim();
+        console.log(cmd);
         move(cmd);
     });
 
