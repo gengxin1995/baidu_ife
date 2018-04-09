@@ -84,7 +84,7 @@ body {
     right: 150px;
 }
 #command-container {
-    margin-left: 50px;
+    margin: 20px 0 50px 50px;
     width: 400px;
     height: 140px;
     position: relative;
@@ -100,13 +100,14 @@ body {
     color: #fff;
     padding: 0;
     z-index: 10;
-    margin: 10px 0;
+    margin: 0;
+    /*margin: 10px 0;*/
 }
 #command-container #command-input {
     width: 400px;
     height: 140px;
     position: absolute;
-    margin: 10px 0;
+    /*margin: 10px 0;*/
     padding: 0;
     color: green;
     background: #000;
@@ -115,6 +116,7 @@ body {
     z-index: 5;
     outline: none;
     resize: none;
+    vertical-align: middle;
 }
 
 

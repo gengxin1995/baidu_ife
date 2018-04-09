@@ -88,7 +88,8 @@ function addEventHandler(ele, event, handler) {
         for (var cur = 0; cur < number; cur++) {
             var li = document.createElement('li');
             li.className = 'line';
-            li.style.height = '15px';
+            li.style.height = '14px';
+            li.style.fontSize = '14px';
             li.style.marginTop = '0px';
             var text = document.createTextNode(cur + 1);
             li.appendChild(text);
@@ -171,7 +172,9 @@ function addEventHandler(ele, event, handler) {
                     break;
                 default:
                     alert('请输入正确的指令');
-                    return false;
+                    throwError(cur);
+                    queue = [];
+                    break;
                 }
                 draw();
                 if (queue.length) {
@@ -181,6 +184,16 @@ function addEventHandler(ele, event, handler) {
         }
 
 
+    }
+    
+    function throwError(error) {
+        var lineObj = document.getElementsByClassName('line');
+        var inputArray = cmdInput.value.split('\n');
+        for (var cur = 0; cur < inputArray.length; cur++) {
+            if (error == inputArray[cur].toLowerCase() || error == inputArray[cur].replace(/\s+\d+\s*/g, '').toLowerCase()) {
+                lineObj[cur].style.backgroundColor = 'red';
+            }
+        }
     }
 
     function go() {
