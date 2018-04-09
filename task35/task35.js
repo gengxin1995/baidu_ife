@@ -112,7 +112,7 @@ function addEventHandler(ele, event, handler) {
             return timer = setTimeout(function () {
                 clearTimeout(timer);
                 timer = null;
-                var cur = queue.shift();
+                var cur = queue.shift().trim();
                 switch (cur) {
                 case 'go':
                     go();
