@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>听指令的小方块（三）</title>
+    <link rel="stylesheet" href="task35.css">
+</head>
+<body>
+<div class="container">
+    <table>
+        <tbody id="background" class="background"></tbody>
+    </table>
+
+    <div id="square" class="square">
+        <div class="square-face"></div>
+    </div>
+
+    <div class="control" id="control">
+        <input id="run" type="button" value="执行">
+        <input id="refresh" type="button" value="Refresh">
+    </div>
+
+    <div id="command-container">
+        <ol id="command-row"></ol>
+        <textarea id="command-input"></textarea>
+    </div>
+
+    <div class="pre">
+        <pre>
+            GO：前进一格
+            TUN LEF：向左转
+            TUN RIG：向右转
+            TUN BAC：向后转
+            TRA LEF：向屏幕的左侧移动一格，方向不变
+            TRA TOP：向屏幕的上面移动一格，方向不变
+            TRA RIG：向屏幕的右侧移动一格，方向不变
+            TRA BOT：向屏幕的下面移动一格，方向不变
+            MOV LEF：方向转向屏幕左侧，并向屏幕的左侧移动一格
+            MOV TOP：方向转向屏幕上面，向屏幕的上面移动一格
+            MOV RIG：方向转向屏幕右侧，向屏幕的右侧移动一格
+            MOV BOT：方向转向屏幕下面，向屏幕的下面移动一格
+
+            对于GO，TRA以及MOV指令增加可以移动格子数量的参数，例如
+            GO 3：向当前方向前进三格
+            TRA TOP 2：向屏幕上方平移两格
+            MOV RIG 4：方向转向屏幕右侧，向屏幕的右侧移动四格
+        </pre>
+    </div>
+</div>
+
+<script src="task35.js"></script>
+</body>
+</html>
