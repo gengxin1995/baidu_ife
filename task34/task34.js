@@ -34,7 +34,7 @@ function addEventHandler(ele, event, handler) {
 }
 
 (function () {
-    // 获取HTLM元素
+    // 获取HTML元素
     var square = document.getElementById("square");
     var btnRun = document.getElementById("run");
 
