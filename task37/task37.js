@@ -43,7 +43,7 @@ FloatLayer.prototype = {
     show: function() {
         this.visible = true;
         this.ele.style.transform = 'translate(-50%, -50%) scale(1,1)';
-        this.maskEle.style.visibility = true;
+        this.maskEle.style.visibility = 'visible';
         this.ele.style.left = '50%';
         this.ele.style.top = '50%';
     },
