@@ -30,7 +30,7 @@ function removeEventHandler(ele, event, handler) {
     }
 }
 
-var FloatLayer = function (element) {
+var FloatLayer = function(element) {
     this.ele = element;
     this.visible = false;
     this.maskEle = null;
@@ -40,7 +40,7 @@ var FloatLayer = function (element) {
 };
 
 FloatLayer.prototype = {
-    show: function () {
+    show: function() {
         this.visible = true;
         this.ele.style.transform = 'translate(-50%, -50%) scale(1,1)';
         this.maskEle.style.visibility = true;
@@ -48,7 +48,7 @@ FloatLayer.prototype = {
         this.ele.style.top = '50%';
     },
 
-    hide: function () {
+    hide: function() {
         this.visible = false;
         this.ele.style.transform = 'translate(-50%, -50%) scale(0,0)';
         var self = this;
@@ -57,7 +57,7 @@ FloatLayer.prototype = {
         }, this.animateTime - 10);
     },
 
-    init: function () {
+    init: function() {
         this.maskEle = document.createElement('div');
         this.maskEle.style.width = window.screen.width + 'px';
         this.maskEle.style.height = window.screen.height + 'px';
@@ -84,24 +84,23 @@ FloatLayer.prototype = {
             if (self.maskEle === this) {
                 self.hide();
             }
-        })
+        });
 
         addEventHandler(this.ele, 'click', function (e) {
             e.stopPropagation();
-        })
+        });
 
         this.setDragNode(this.ele.children[0]);
     },
 
-    setDragNode: function (node) {
-        var preX, preY;
+    setDragNode: function(node) {
         var self = this;
 
         node.style.cursor = 'move';
 
         addEventHandler(node, 'mousedown', function (e) {
-            var disX = e.clientX - self.ele.offsetWidth;
-            var disY = e.clientY - self.ele.offsetHeight;
+            var disX = e.clientX - self.ele.offsetLeft;
+            var disY = e.clientY - self.ele.offsetTop;
 
             var move = function (e) {
                 self.ele.style.left = e.clientX - disX + 'px';
