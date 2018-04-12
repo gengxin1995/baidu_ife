@@ -9,20 +9,6 @@
  * };
  */
 
-/**
- * addEventHandler
- * 跨浏览器实现事件绑定
- */
-function addEventHandler(ele, event, handler) {
-    if(ele.addEventListener){
-        ele.addEventListener(event, handler, false);
-    }else if(ele.attachEvent){
-        ele.attachEvent("on" + event, handler);
-    }else{
-        ele["on" + event] = handler;
-    }
-}
-
 // 以下两个函数用于随机模拟生成测试数据
 function getDateStr(dat) {
     var y = dat.getFullYear();

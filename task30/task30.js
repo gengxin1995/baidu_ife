@@ -1,20 +1,4 @@
 (function () {
-    /**
-     * 跨浏览器实现事件绑定
-     * @param ele
-     * @param event
-     * @param handler
-     */
-    function addEventHandler(ele, event, handler) {
-        if (ele.addEventListener) {
-            ele.addEventListener(event, handler, false);
-        }else if(ele.attachEvent) {
-            ele.attachEvent("on" + event, handler);
-        }else {
-            ele["on" + event] = handler;
-        }
-    }
-
     var hintText=[{hint:"必填，长度为4~16位字符",right:"名称格式正确",wrong:"名称格式有误",isPassed:false},
         {hint:"必填，长度为6~16位字符,包含字母和数字",right:"密码可用",wrong:"密码不可用",isPassed:false},
         {hint:"必填，必须与密码相同",right:"密码输入一致",wrong:"密码输入不一致",isPassed:false},

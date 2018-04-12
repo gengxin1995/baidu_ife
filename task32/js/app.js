@@ -1,19 +1,3 @@
-/**
- * 跨浏览器实现事件绑定
- * @param ele
- * @param event
- * @param handler
- */
-function addEvnetHandler(ele, event, handler) {
-    if (ele.addEventListener) {
-        ele.addEventListener(event, handler, false);
-    }else if(ele.attachEvent) {
-        ele.attachEvent("on" + event, handler);
-    }else {
-        ele["on" + event] = handler;
-    }
-}
-
 function $(selector) {
     return document.querySelector(selector);
 }
