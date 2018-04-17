@@ -1,5 +1,5 @@
-var SortableTable = function (tabelEle, data, names, fnGetSort) {
-    this.tableEle = tabelEle;
+var SortableTable = function (tableEle, data, names, fnGetSort) {
+    this.tableEle = tableEle;
     this.data = data;
     this.names = names;
     this.fnGetSort = fnGetSort;
