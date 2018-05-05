@@ -1,4 +1,4 @@
-var DatePicker = function (container) {
+var DatePicker = function(container) {
     this.container = container;
     this.date = new Date();
     this.mainEle = null;
@@ -7,12 +7,13 @@ var DatePicker = function (container) {
     this.init();
 }
 
+
 DatePicker.prototype = {
     days: ['日', '一', '二', '三', '四', '五', '六'],
 
-    init: function () {
-        //日历外框
-        this.mainEle = $('<div></div>')
+    init: function() {
+        // 日历外框
+        this.mainEle = $('<div><div>')
             .css('width', '350px')
             .css('height', '400px')
             .css('border', '2px solid lightgray')
@@ -21,7 +22,7 @@ DatePicker.prototype = {
 
         var self = this;
 
-        //标题
+        // 标题
         var p = $('<p>')
             .css('text-align', 'center')
             .css('margin', '0')
@@ -37,8 +38,8 @@ DatePicker.prototype = {
             .css('float', 'left')
             .css('cursor', 'pointer')
             .appendTo(p)
-            .click(function () {
-                self.perMonth();
+            .click(function() {
+                self.preMonth();
             });
 
         var arrRight = $('<strong>')
@@ -46,8 +47,8 @@ DatePicker.prototype = {
             .css('float', 'right')
             .css('cursor', 'pointer')
             .appendTo(p)
-            .click(function () {
-                self.nextMonth();
+            .click(function() {
+                self.nextMonth()
             });
 
         function createEle() {
@@ -98,7 +99,7 @@ DatePicker.prototype = {
         this.selectDate(dat);
     },
 
-    perMonth: function () {
+    preMonth: function () {
         var dat = new Date(this.date);
         dat.setMonth(dat.getMonth() - 1);
         this.selectDate(dat);
