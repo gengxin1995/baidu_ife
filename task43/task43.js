@@ -1,6 +1,7 @@
 var allImg = $('img');
 
 allImg.map(function (t) {
+    // <img src="http://placehold.it/400x200/4E8EF7/fff">
     var randomColor = ('00000' + (Math.random() * 0x1000000 << 0).toString(16)).slice(-6);
     var randomSize = Math.floor(Math.random() * 15 + 1) * 100 + 'X' + Math.floor(Math.random() * 15 + 1) * 100;
     $(this).attr('src', 'http://placehold.it/' + randomSize + '/' + randomColor + '/fff');
