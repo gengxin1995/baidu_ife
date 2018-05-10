@@ -1,0 +1,105 @@
+body {
+    min-width: 600px;
+}
+
+#container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+[id*='imgs'] {
+    width: 100%;
+    /*1vh=视口高度的1%*/
+    height: 96vh;
+    margin: 2vh 0;
+}
+
+[id*='imgs'] img {
+    height: 100%;
+    /*指定可替换元素在已被设定好的宽高中展示的方式*/
+    object-fit: cover;
+    float: left;
+}
+
+#imgs1 img {
+    width: 100%;
+}
+
+#imgs2 {
+    position: relative;
+}
+
+#imgs2 img {
+    width: calc(100% / 3.0 * 2.0);
+    position: absolute;
+    top: 0;
+}
+
+#imgs2 img:first-child {
+    clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 100% 0%);
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 100% 0%);
+}
+
+#imgs2 img:last-child {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%, 100% 0%);
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%, 100% 0%);
+    left: calc(100% / 3.0);
+}
+
+#imgs3 img:nth-of-type(n+2) {
+    height: 50%;
+}
+
+#imgs4 img {
+    height: 50%;
+    width: 50%;
+}
+
+#imgs5 {
+    position: relative;
+}
+
+#imgs5 img {
+    position: absolute;
+}
+
+#imgs5 img:nth-of-type(1) {
+    width: calc(100% / 3.0 * 2.0);
+    height: calc(100% / 3.0 * 2.0);
+}
+
+#imgs5 img:nth-of-type(2){
+    width: calc(100% / 3.0);
+    left: calc(100% / 3.0 * 2.0);
+}
+
+#imgs5 img:nth-of-type(3){
+    width: calc(100% / 3.0);
+    height: calc(100% / 3.0);
+    bottom: 0;
+}
+
+#imgs5 img:nth-of-type(4){
+    width: calc(100% / 3.0);
+    height: calc(100% / 3.0);
+    left: calc(100% / 3.0);
+    bottom: 0;
+}
+
+#imgs5 img:nth-of-type(5){
+    width: calc(100% / 3.0);
+    right: 0;
+    bottom: 0;
+}
+
+#imgs6 img:nth-of-type(1) {
+    width: calc(100% / 3.0 * 2.0 - 1px);
+    height: calc(100% / 3.0 * 2.0 - 1px);
+}
+
+#imgs6 img:nth-of-type(n + 2) {
+    width: calc(100% / 3.0);
+    height: calc(100% / 3.0);
+}
+
+
